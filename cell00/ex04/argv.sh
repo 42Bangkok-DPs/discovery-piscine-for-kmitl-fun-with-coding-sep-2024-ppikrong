@@ -1,4 +1,9 @@
-$ ./argv.sh Hello World ! 42
-Hello
-World
-!
+if [ $# -eq 0 ]; then
+echo "No arguments provided"
+else
+for i in {1..3}; do
+if [ -n "$!i}" ]; then
+echo "${!i}"
+fi
+done
+fi
